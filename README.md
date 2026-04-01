@@ -80,6 +80,8 @@ The following query options were successfully demonstrated:
 - `$orderby` → sorted products
 Screenshots of all queries are included in `/docs`.
 
+*** Postman link : [https://ibrahimsolimman-1800525.postman.co/workspace/e899a941-0a2c-4582-8973-924062b5c8c5/collection/53657876-14a5d90d-2553-4c3e-9f2c-bb22a8dd1887?action=share&source=copy-link&creator=53657876](https://ibrahimsolimman-1800525.postman.co/workspace/e899a941-0a2c-4582-8973-924062b5c8c5/collection/53657876-14a5d90d-2553-4c3e-9f2c-bb22a8dd1887)
+
 ---
 
  B4 - Fiori Object Page
@@ -97,7 +99,7 @@ Request and response screenshots are included in `/docs`.
 
 ---
 
-### Not Completed
+* Not Completed
 
 #### B3 - XSUAA Authentication
 Not implemented due to lack of a publicly accessible application URL.
