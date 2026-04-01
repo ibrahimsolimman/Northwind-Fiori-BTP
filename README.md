@@ -94,6 +94,7 @@ Screenshots of all queries are included in `/docs`.
 Navigation from List Report to Object Page was successfully implemented.
 - Clicking a product opens a detail page of record
 - Basic structure is working and object page open showin product details
+- Screenshots of [Object Page](docs/object-page.png)
 
 ---
 
