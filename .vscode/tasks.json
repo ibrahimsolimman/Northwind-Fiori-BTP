@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "build.mta",
+			"label": "Build1",
+			"taskType": "Build",
+			"projectPath": "/home/user/projects/project1",
+			"extensions": []
+		},
+		{
+			"type": "deploy.mta.cf",
+			"label": "Deploy-Northwind-App1",
+			"taskType": "Deploy",
+			"mtarPath": "/home/user/projects/project1/mta_archives/project1_0.0.1.mtar",
+			"extensions": [],
+			"dependsOn": [
+				"Build "
+			],
+			"cfTarget": "create new target",
+			"cfEndpoint": "",
+			"cfOrg": "",
+			"cfSpace": ""
+		}
+	]
+}

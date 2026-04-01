@@ -18,9 +18,9 @@
     "dataSources": {
       "annotation": {
         "type": "ODataAnnotation",
-        "uri": "annotations/annotations.xml",
+        "uri": "annotations/annotation.xml",
         "settings": {
-          "localUri": "annotations/annotations.xml"
+          "localUri": "annotations/annotation.xml"
         }
       },
       "mainService": {

@@ -14,7 +14,7 @@
     </edmx:Reference>
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
-          <Annotations Target="ODataWeb.Northwind.Model.Products">
+       <Annotations Target="NorthwindModel.Product">
 
     <Annotation Term="UI.LineItem">
         <Collection>
@@ -33,7 +33,6 @@
         </Collection>
     </Annotation>
 
-    <!-- 🔥 الحل الحقيقي -->
     <Annotation Term="UI.Identification">
         <Collection>
             <Record Type="UI.DataField">
@@ -50,6 +49,79 @@
             </Record>
         </Collection>
     </Annotation>
+<Annotation Term="UI.Facets">
+    <Collection>
+        <Record Type="UI.ReferenceFacet">
+            <PropertyValue Property="Label" String="General Info"/>
+            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#General"/>
+        </Record>
+    </Collection>
+</Annotation>
+
+<Annotation Term="UI.FieldGroup" Qualifier="General">
+    <Record>
+        <PropertyValue Property="Data">
+            <Collection>
+
+                <Record Type="UI.DataField">
+                    <PropertyValue Property="Value" Path="ProductID"/>
+                </Record>
+
+                <Record Type="UI.DataField">
+                    <PropertyValue Property="Value" Path="ProductName"/>
+                </Record>
+
+                <Record Type="UI.DataField">
+                    <PropertyValue Property="Value" Path="UnitPrice"/>
+                </Record>
+
+                <Record Type="UI.DataField">
+                    <PropertyValue Property="Value" Path="UnitsInStock"/>
+                </Record>
+
+            </Collection>
+        </PropertyValue>
+    </Record>
+</Annotation>
+
+<Annotation Term="UI.HeaderFacets">
+    <Collection>
+        <Record Type="UI.ReferenceFacet">
+            <PropertyValue Property="Label" String="Product Info"/>
+            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#HeaderInfo"/>
+        </Record>
+    </Collection>
+</Annotation>
+
+<Annotation Term="UI.FieldGroup" Qualifier="HeaderInfo">
+    <Record>
+        <PropertyValue Property="Data">
+            <Collection>
+
+                <Record Type="UI.DataField">
+                    <PropertyValue Property="Value" Path="ProductID"/>
+                    <PropertyValue Property="Label" String="Product ID"/>
+                </Record>
+
+                <Record Type="UI.DataField">
+                    <PropertyValue Property="Value" Path="ProductName"/>
+                    <PropertyValue Property="Label" String="Product Name"/>
+                </Record>
+
+                <Record Type="UI.DataField">
+                    <PropertyValue Property="Value" Path="UnitPrice"/>
+                    <PropertyValue Property="Label" String="Unit Price"/>
+                </Record>
+
+                <Record Type="UI.DataField">
+                    <PropertyValue Property="Value" Path="UnitsInStock"/>
+                    <PropertyValue Property="Label" String="Units In Stock"/>
+                </Record>
+
+            </Collection>
+        </PropertyValue>
+    </Record>
+</Annotation>
 
 </Annotations>
         </Schema>
