@@ -104,7 +104,7 @@ A POST request was successfully executed using a writable OData demo service.
 - Created a new product record via Postman
 - Verified response returned the created entity
 Request and response screenshots are included in `/docs`.
- Screenshots of [POST](docs/postman-post)
+ Screenshots of [POST](docs/postman-post.png)
 
 ---
 
