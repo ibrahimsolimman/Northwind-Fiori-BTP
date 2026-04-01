@@ -37,7 +37,7 @@ The application follows a standard SAP BTP architecture:
    ```bash
    npm start.
 
-** BAS Preview (docs/bas-preview.png)
+- Screenshots of [BAS Preview](docs/bas-preview.png)
 
 -------------------------------------
 
