@@ -61,7 +61,49 @@ Reason:The Products entity provides meaningful business data such as product nam
 
 6- Bonus Tasks Completed
 
--B1 
+B1 - Deploy to Cloud Foundry
+The application was successfully deployed to the Cloud Foundry environment using MTA.
+Steps performed:
+- Built the MTA archive using `mbt build`
+- Deployed using `cf deploy`
+- Verified deployment via `cf apps`
+Note: The application was deployed successfully, but public access requires SAP Build Work Zone subscription.
+
+---
+
+ B2 - OData Testing via Postman
+The Northwind OData service was tested using Postman.
+The following query options were successfully demonstrated:
+- `$top` → limited number of records
+- `$filter` → filtered products by price
+- `$select` → retrieved specific fields only
+- `$orderby` → sorted products
+Screenshots of all queries are included in `/docs`.
+
+---
+
+ B4 - Fiori Object Page
+Navigation from List Report to Object Page was successfully implemented.
+- Clicking a product opens a detail page of record
+- Basic structure is working and object page open showin product details
+
+---
+
+ B5 - OData POST Operation
+A POST request was successfully executed using a writable OData demo service.
+- Created a new product record via Postman
+- Verified response returned the created entity
+Request and response screenshots are included in `/docs`.
+
+---
+
+### Not Completed
+
+#### B3 - XSUAA Authentication
+Not implemented due to lack of a publicly accessible application URL.
+
+#### B6 - SAP Build Work Zone
+Not completed because subscription is not available in SAP BTP trial environment. 
    
 
 
