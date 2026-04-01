@@ -74,6 +74,8 @@ Steps performed:
 - Verified deployment via `cf apps`
 Note: The application was deployed successfully, but public access requires SAP Build Work Zone subscription.
 
+- Screenshots of [CF Apps](docs/deployment_finished_cf-apps.png)
+
 ---
 
  B2 - OData Testing via Postman
