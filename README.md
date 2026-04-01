@@ -1,43 +1,69 @@
-## Application Details
-|               |
-| ------------- |
-|**Generation Date and Time**<br>Mon Mar 30 2026 20:52:11 GMT+0000 (Coordinated Universal Time)|
-|**App Generator**<br>SAP Fiori Application Generator|
-|**App Generator Version**<br>1.22.0|
-|**Generation Platform**<br>SAP Business Application Studio|
-|**Template Used**<br>List Report Page V2|
-|**Service Type**<br>OData URL|
-|**Service URL**<br>https://services.odata.org/V2/Northwind/Northwind.svc/|
-|**Module Name**<br>project1|
-|**Application Title**<br>northwind-app|
-|**Namespace**<br>com.intern.northwindapp|
-|**UI5 Theme**<br>sap_horizon|
-|**UI5 Version**<br>1.146.0|
-|**Enable TypeScript**<br>False|
-|**Add Eslint configuration**<br>True, see https://www.npmjs.com/package/@sap-ux/eslint-plugin-fiori-tools#rules for the eslint rules.|
-|**Main Entity**<br>Products|
-|**Navigation Entity**<br>None|
+- SAP BTP Northwind Fiori Application
 
-## project1
+1- Project Description :
+This project is an SAP Fiori Elements application developed on SAP Business Technology Platform (BTP).  
+It consumes the Northwind OData V2 service to display product data in a List Report interface with basic navigation to an Object Page.
 
-An SAP Fiori application.
+-------------------------------------
 
-### Starting the generated app
+2- Architecture Overview :
+The application follows a standard SAP BTP architecture:
 
--   This app has been generated using the SAP Fiori tools - App Generator, as part of the SAP Fiori tools suite.  To launch the generated application, run the following from the generated application root folder:
+- SAP Business Application Studio (BAS) is used for development
+- SAP BTP Destination connects the app to the external Northwind OData service
+- The Fiori application consumes data through this destination
+- Deployment is done using Multi-Target Application (MTA) to Cloud Foundry
 
-```
-    npm start
-```
+-------------------------------------
 
-- It is also possible to run the application using mock data that reflects the OData Service URL supplied during application generation.  In order to run the application with Mock Data, run the following from the generated app root folder:
+3- Setup Instructions :
 
-```
-    npm run start-mock
-```
+1. Create SAP BTP Trial Account  
+2. Enable Cloud Foundry environment  
+3. Create a space (dev)  
+4. Subscribe to Business Application Studio  
+5. Create a Destination:
+   - Name: Northwind
+   - URL: https://services.odata.org
+   - Proxy Type: Internet
+   - Authentication: No Authentication
+6. Create Fiori Elements App:
+   - Template: List Report Object Page
+   - Data Source: OData V2
+   - Service URL: [/V2/Northwind/Northwind.svc/](https://services.odata.org/v2/northwind/northwind.svc/) 
+7. Run the app:
+   ```bash
+   npm start
 
-#### Pre-requisites:
+-------------------------------------
 
-1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
+4- OData Entity Used
+
+Entity: Products
+
+Reason:The Products entity provides meaningful business data such as product name, price, and stock levels, making it suitable for demonstrating Fiori List Report capabilities.
+
+-------------------------------------
+
+5- Challenges Faced:
+
+1. Object Page Not Displaying Data
+  Issue: Object Page opened but showed empty content
+  Solution: Attempted multiple annotation configurations; issue likely due to missing backend annotations in the public OData service
+2. Deployment URL Not Accessible
+ Issue: Application deployed but not accessible publicly
+ Solution: Identified that SAP Build Work Zone subscription is required, which is not available in trial
+3. Git Authentication Issues
+  Issue: BAS failed to authenticate with GitHub
+  Solution: Used Personal Access Token with remote URL configuration.
+
+-------------------------------------
+
+6- Bonus Tasks Completed
+
+-B1 
+   
+
+
 
 
