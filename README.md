@@ -53,15 +53,15 @@ Reason:The Products entity provides meaningful business data such as product nam
 5- Challenges Faced:
 
 1. Object Page Not Displaying Data
-  Issue: Object Page opened but showed empty content
-  Solution: Attempted multiple annotation configurations; issue likely due to missing backend annotations in the public OData service
+  -Issue: Object Page opened but showed empty content
+  -Solution: Attempted multiple annotation configurations; issue likely due to missing backend annotations in the public OData service
 2. Deployment URL Not Accessible
- Issue: Application deployed but not accessible publicly
- Solution: Identified that SAP Build Work Zone subscription is required, which is not available in trial
+ -Issue: Application deployed but not accessible publicly
+ -Solution: Identified that SAP Build Work Zone subscription is required, which is not available in trial
   workzone unsubscription in (docs/workzone-info.png) (docs/subscription-instance.png)
 4. Git Authentication Issues
-  Issue: BAS failed to authenticate with GitHub
-  Solution: Used Personal Access Token with remote URL configuration.
+  -Issue: BAS failed to authenticate with GitHub
+  -Solution: Used Personal Access Token with remote URL configuration.
 
 -------------------------------------
 
