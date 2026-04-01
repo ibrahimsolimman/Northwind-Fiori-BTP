@@ -27,8 +27,7 @@ The application follows a standard SAP BTP architecture:
    - URL: https://services.odata.org
    - Proxy Type: Internet
    - Authentication: No Authentication
-    ### Destination Configuration
-     ![Destination](docs/destination.png)
+   - Screenshots of [Destination](docs/destination.png)
    
 7. Create Fiori Elements App:
    - Template: List Report Object Page
