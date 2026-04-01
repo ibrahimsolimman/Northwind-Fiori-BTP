@@ -27,13 +27,19 @@ The application follows a standard SAP BTP architecture:
    - URL: https://services.odata.org
    - Proxy Type: Internet
    - Authentication: No Authentication
-6. Create Fiori Elements App:
+    ### Destination Configuration
+     ![Destination](docs/destination.png)
+   
+7. Create Fiori Elements App:
    - Template: List Report Object Page
    - Data Source: OData V2
-   - Service URL: [/V2/Northwind/Northwind.svc/](https://services.odata.org/v2/northwind/northwind.svc/) 
-7. Run the app:
+   - Service URL: [/V2/Northwind/Northwind.svc/](https://services.odata.org/v2/northwind/northwind.svc/)
+8. Run the app:
    ```bash
-   npm start
+   npm start.
+
+   *### BAS Preview
+BAS Preview (docs/bas-preview.png)
 
 -------------------------------------
 
@@ -53,7 +59,8 @@ Reason:The Products entity provides meaningful business data such as product nam
 2. Deployment URL Not Accessible
  Issue: Application deployed but not accessible publicly
  Solution: Identified that SAP Build Work Zone subscription is required, which is not available in trial
-3. Git Authentication Issues
+  workzone unsubscription in (docs/workzone-info.png) (docs/subscription-instance.png)
+4. Git Authentication Issues
   Issue: BAS failed to authenticate with GitHub
   Solution: Used Personal Access Token with remote URL configuration.
 
